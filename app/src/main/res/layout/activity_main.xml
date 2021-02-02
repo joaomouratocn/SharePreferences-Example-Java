@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/edt_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:autofillHints="@string/strInsertMessage"
+        android:inputType="textShortMessage"
+        android:hint="@string/strInsertMessage"/>
+
+    <LinearLayout
+        android:id="@+id/layout_duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/edt_message"
+        android:layout_margin="8dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/edt_message"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            android:text="@string/strTextDuration"/>
+
+        <SeekBar
+            android:id="@+id/seek_duration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="10"/>
+
+        <TextView
+            android:id="@+id/txt_duration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:textAlignment="textEnd"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:text="0 ms"
+            tools:ignore="HardCodedText"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_enable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/edt_message"
+        android:orientation="horizontal"
+        android:layout_below="@id/layout_duration"
+        android:layout_margin="8dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/txt_enable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            android:text="@string/strEnable"/>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_enable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/edt_message"
+        android:layout_margin="4dp"
+        android:layout_below="@id/layout_enable"
+        android:text="@string/strSavePreferences"/>
+
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/edt_message"
+        android:layout_below="@id/btn_save"
+        android:layout_margin="4dp"
+        android:text="@string/strReset"/>
+
+    <Button
+        android:id="@+id/btn_clear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/edt_message"
+        android:layout_below="@id/btn_reset"
+        android:layout_margin="4dp"
+        android:text="@string/strClearPrefrerences"/>
+
+</RelativeLayout>

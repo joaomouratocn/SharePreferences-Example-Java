@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">SharePreferences</string>
+    <string name="strInsertMessage">Insert Message</string>
+    <string name="strMs">%d ms</string>
+    <string name="strEnable">Enable: </string>
+    <string name="strTextDuration">Insert duration:</string>
+    <string name="strSavePreferences">Save preferences</string>
+    <string name="strClearPrefrerences">Clear preferences</string>
+    <string name="strReset">Reset Activity</string>
+    <string name="strPrefSaved">Saved preferences</string>
+</resources>
